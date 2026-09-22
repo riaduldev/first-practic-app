@@ -17,6 +17,9 @@ const NavbarPage = () => {
           <li>
             <Link href="/about/developers">Developers</Link>
           </li>
+          <li>
+            <Link href="/blogs">Blogs</Link>
+          </li>
      </>
   return (
     <div className="navbar bg-base-100 shadow-sm">
