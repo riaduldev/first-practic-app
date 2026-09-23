@@ -1,24 +1,45 @@
+"use client"
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+
+
 
 const NavbarPage = () => {
 
-
+const pathName = usePathname();
+console.log("pathname", pathName);
      const links = <>
       <li>
-            <Link href="/docs">Docs</Link>
+            <Link className= {pathName === "/docs" ? "text-blue-500" : ''} href="/docs">Docs</Link>
           </li>
 
           <li>
-            <Link href="/showcase">ShowCase</Link>
+            <Link className= {pathName === "/showcase" ? "text-blue-500" : ''} href="/showcase">ShowCase</Link>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link className= {pathName === "/about" ? "text-blue-500" : ''} href="/about">About</Link>
           </li>
           <li>
-            <Link href="/about/developers">Developers</Link>
+            <Link className= {pathName === "/users" ? "text-blue-500" : ''} href="/users">Users</Link>
           </li>
           <li>
-            <Link href="/blogs">Blogs</Link>
+            <Link className= {pathName === "/about/developers" ? "text-blue-500" : ''} href="/about/developers">Developers</Link>
+          </li>
+          <li>
+            <Link className= {pathName === "/blogs" ? "text-blue-500" : ''} href="/blogs">Blogs</Link>
+          </li>
+          <li>
+            <Link className= {pathName === "/dashboard" ? "text-blue-500" : ''} href="/dashboard">Dashboard</Link>
+          </li>
+          <li>
+            <Link className= {pathName === "/post" ? "text-blue-500" : ''} href="/post">Post</Link>
+          </li>
+          <li>
+            <Link className= {pathName === "/todos" ? "text-blue-500" : ''} href="/todos">Todos</Link>
+          </li>
+          <li>
+            <Link className= {pathName === "/comments" ? "text-blue-500" : ''} href="/comments">Comments</Link>
           </li>
      </>
   return (
